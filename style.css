@@ -1,34 +1,159 @@
-body {
-    margin: 0;
-    padding: 20px;
-    background: #f6b8b8;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 5px;
-    justify-content: flex-start;
-  }
-  
-  .small {
-    width: 120px;
-    height: 120px;
-    background-color: rgb(13, 11, 185);
+ /* body { height: 200vh;
+background-color: rgb(189, 255, 255);}
+.static {
 
-  }
-.medium {
-    width: 250px;
-    height: 120px;
-    background-color: rgb(202, 26, 26);
-  }
-.big {
-    width: 250px;
-    height: 120px;
-    background-color: rgb(126, 253, 115);
-  }
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            background-color: #ea76ff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: rgb(0, 0, 0); 
+            
+            text-align: center; }
+.relative {
+  width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            background-color: #ea76ff; 
+            display: flex; 
+            color: rgb(0, 0, 0); 
+            text-align: center;
+            left:50px;
+            top:20%;
+        }
+           
+.container{
+ width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            background-color: #ea76ff; 
+            display: flex; 
+         
+            align-items: center; 
+            color: rgb(0, 0, 0); 
+            
+            text-align: center; }
 
-  .large {
-    width: 350px;
-    height: 120px;
-    background-color: rgb(117, 105, 186);
-  }
+.abcolute {
+  width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            background-color: #ea76ff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: rgb(0, 0, 0); 
+            
+            text-align: center; }
+.fixed {
+   position: fixed;
+width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            background-color: #ea76ff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: rgb(0, 0, 0); 
+            
+            text-align: center; }
+.sticky {
+    width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            background-color: #ea76ff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: rgb(0, 0, 0); 
+            
+            text-align: center; } */
+           body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .container{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 6%;
+    align-items: center
+}
+        .example {
+            width: 300px;
+            height: 200px;
+            margin: 1rem;
+            float: left;
+            position: static; /* По умолчанию статичное */
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .static {
+            background-color: lightblue;
+        }
+        
+       .relative {
+            position: relative;
+            top: 20px;
+            right: 20px;
+            background-color: lightgreen;
+        }
+        
+        .absolute {
+            position: absolute;
+            bottom: 50px;
+            left: calc(50% - 150px); /* Центрирование абсолютного блока */
+            background-color: orange;
+        }
+        
+        .fixed {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: pink;
+        }
+        
+        p {
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .example {
+                width: 100%;
+                height: auto;
+                margin-top: 1rem;
+                clear: both;
+            }
+            
+           
+            
+            .sticky{
+    position:sticky ;
+    width: 200px;
+    height:70px ;
+    background-color: crimson;
+    top:50px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+}
+        }
